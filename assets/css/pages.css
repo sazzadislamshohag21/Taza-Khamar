@@ -17,7 +17,7 @@
 .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--sp-xl); align-items: center; }
 .hero__title { margin-block: var(--sp-sm); }
 .hero__title .accent-text { color: var(--color-accent-dark); }
-.hero__lead { font-size: var(--fs-md); max-width: 46ch; margin-bottom: var(--sp-md); }
+.hero__lead { font-size: var(--fs-md); max-width: 46ch; margin-bottom: var(--sp-md); letter-spacing: normal; }
 .hero__actions { display: flex; gap: var(--sp-sm); flex-wrap: wrap; margin-bottom: var(--sp-lg); }
 
 .location-picker {
@@ -110,7 +110,7 @@
 
 /* ---------- FARMERS ---------- */
 .farmer-card { display: block; overflow: hidden; }
-.farmer-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.farmer-card:hover { box-shadow: var(--shadow-lg); transform: perspective(800px) rotateX(4deg) rotateY(-4deg) translateY(-6px) scale(1.02); }
 .farmer-card__media {
   position: relative;
   aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;
