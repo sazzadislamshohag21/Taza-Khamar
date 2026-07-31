@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide — Taza Khamar</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232C8850'/%3E%3Cstop offset='100%25' stop-color='%23154A2A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='7' fill='url(%23g)'/%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18.3' cy='4.7' r='2.1' fill='%23F0932B'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body data-page="guides">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" id="crumb"></nav>
+    </div>
+    <section class="section-tight">
+      <div class="container">
+        <article class="guide-article" id="guideArticle"></article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script>
+    function renderGuideDetail() {
+      const id = new URLSearchParams(window.location.search).get("id");
+      const g = GUIDES.find((x) => x.id === id) || GUIDES[0];
+      const color = catColorClass(PRODUCTS.find((p) => p.icon === g.icon)?.category || "fish");
+
+      document.getElementById("crumb").innerHTML = `
+        <a href="index.html">${t("breadcrumb.home")}</a><span class="sep">${icon("chevronRight")}</span>
+        <a href="guides.html">${t("guides.title")}</a><span class="sep">${icon("chevronRight")}</span>
+        <span class="current">${getLang() === "bn" ? g.titleBn : g.title}</span>`;
+
+      document.getElementById("guideArticle").innerHTML = `
+        <div class="guide-article__hero" style="${mediaBg(color)}">${icon(g.icon)}</div>
+        <span class="badge">${g.category} · ${g.minutes} ${t("guides.readtime")}</span>
+        <h1 style="margin-top:.6rem">${getLang() === "bn" ? g.titleBn : g.title}</h1>
+        <p style="font-size:var(--fs-md);margin-top:.6rem">${g.excerpt}</p>
+        <div style="margin-top:var(--sp-md)">
+          ${g.body.map((para) => `<p>${para}</p>`).join("")}
+        </div>
+        <a href="guides.html" class="btn btn-outline" style="margin-top:var(--sp-lg)">${t("guides.back")}</a>`;
+      document.title = `${g.title} — Taza Khamar`;
+    }
+    document.addEventListener("DOMContentLoaded", renderGuideDetail);
+    document.addEventListener("tk:langchange", renderGuideDetail);
+  </script>
+</body>
+</html>

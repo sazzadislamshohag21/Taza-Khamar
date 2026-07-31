@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Taza Khamar — Design Tokens
+   ========================================================================== */
+
+:root {
+  /* Color — brand */
+  --color-primary: #1F6B3E;
+  --color-primary-dark: #154A2A;
+  --color-primary-light: #E7F3EA;
+  --color-accent: #F0932B;
+  --color-accent-dark: #D97A15;
+  --color-accent-light: #FDF0DF;
+  --color-secondary: #C1442D;
+  --color-secondary-light: #FBEAE6;
+
+  /* Color — neutrals */
+  --color-bg: #FBF8F2;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F4EFE4;
+  --color-text: #26261F;
+  --color-text-muted: #63604F;
+  --color-text-faint: #94907C;
+  --color-border: #E7E1D3;
+  --color-border-strong: #D3CBB4;
+
+  /* Color — semantic */
+  --color-success: #1F6B3E;
+  --color-warning: #F0932B;
+  --color-error: #C1442D;
+  --color-star: #F0AA2B;
+
+  /* Typography */
+  --font-heading: "Poppins", "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+  --font-body: "Inter", "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+
+  --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --fs-sm: clamp(0.8125rem, 0.79rem + 0.15vw, 0.875rem);
+  --fs-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+  --fs-md: clamp(1.05rem, 1rem + 0.3vw, 1.15rem);
+  --fs-lg: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
+  --fs-xl: clamp(1.5rem, 1.3rem + 0.9vw, 1.9rem);
+  --fs-2xl: clamp(1.9rem, 1.6rem + 1.4vw, 2.6rem);
+  --fs-3xl: clamp(2.4rem, 1.9rem + 2.2vw, 3.6rem);
+
+  /* Spacing scale */
+  --sp-3xs: 0.25rem;
+  --sp-2xs: 0.5rem;
+  --sp-xs: 0.75rem;
+  --sp-sm: 1rem;
+  --sp-md: 1.5rem;
+  --sp-lg: 2.25rem;
+  --sp-xl: 3.5rem;
+  --sp-2xl: 5rem;
+  --sp-3xl: 7rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-sm: 0 2px 8px rgba(38, 38, 31, 0.06);
+  --shadow-md: 0 8px 24px rgba(38, 38, 31, 0.09);
+  --shadow-lg: 0 20px 48px rgba(38, 38, 31, 0.14);
+  --shadow-glow: 0 8px 28px rgba(31, 107, 62, 0.22);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;
+  --dur-med: 280ms;
+  --dur-slow: 450ms;
+
+  /* Layout */
+  --container-max: 1280px;
+  --header-h: 76px;
+}
