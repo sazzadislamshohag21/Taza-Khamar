@@ -30,7 +30,7 @@
   --color-star: #F0AA2B;
 
   /* Typography */
-  --font-heading: "Seraphina Serif", "Poppins", "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+  --font-heading: "Mogent", "Poppins", "Hind Siliguri", "Noto Sans Bengali", serif;
   --font-body: "Inter", "Hind Siliguri", "Noto Sans Bengali", sans-serif;
 
   --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
