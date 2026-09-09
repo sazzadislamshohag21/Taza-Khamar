@@ -329,6 +329,22 @@
     document.querySelectorAll('.category-rail').forEach(rail => {
       rail.tabIndex = 0;
       rail.setAttribute('aria-label', 'Product categories — scroll to explore');
+      const wrap = rail.closest('.category-rail-wrap');
+      const nav = wrap.querySelectorAll('[data-rail-step]');
+      rail.querySelectorAll('.category-card').forEach((card, index) => card.style.setProperty('--category-index', index));
+      const updateRail = () => {
+        const max = rail.scrollWidth - rail.clientWidth;
+        wrap.style.setProperty('--rail-progress', rail.scrollWidth ? Math.min(1, (rail.scrollLeft + rail.clientWidth) / rail.scrollWidth) : 1);
+        nav.forEach(button => {
+          button.disabled = Number(button.dataset.railStep) < 0 ? rail.scrollLeft <= 1 : rail.scrollLeft >= max - 1;
+        });
+      };
+      nav.forEach(button => button.addEventListener('click', () => {
+        rail.scrollBy({ left: Number(button.dataset.railStep) * rail.clientWidth * .75, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      }));
+      rail.addEventListener('scroll', updateRail, { passive: true });
+      window.addEventListener('resize', updateRail);
+      updateRail();
       let drag = null;
       let suppressClick = false;
       rail.addEventListener('pointerdown', event => {
