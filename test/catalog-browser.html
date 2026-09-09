@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><title>Catalog integration checks</title>
+<pre id="result">RUNNING</pre><iframe src="../shop.html" style="width:390px;height:800px"></iframe>
+<script>
+(async()=>{
+ const frame=document.querySelector('iframe');
+ const wait=()=>new Promise(r=>setTimeout(r,100));
+ const assert=(v,m)=>{if(!v)throw Error(m);};
+ try {
+  for(let n=0;n<200;n++){if(frame.contentWindow.SazzadShop?.products.length)break;await wait();}
+  const w=frame.contentWindow,d=frame.contentDocument,api=w.SazzadShop;
+  assert(api.products.length===3386,'catalog count');
+  assert(d.querySelectorAll('.catalog-department').length===12,'12 departments');
+  assert(d.querySelectorAll('.shop-product-card').length===24,'page size');
+  const first=d.querySelector('.shop-product-card').dataset.productId;
+  d.getElementById('catalog-next').click();assert(d.querySelector('.shop-product-card').dataset.productId!==first,'pagination changes products');
+  const cat=d.getElementById('catalog-category');cat.value='1417';cat.dispatchEvent(new w.Event('change'));
+  assert(d.querySelectorAll('.shop-product-card').length===6,'vehicle department');
+  const p=api.products.find(p=>p.id===d.querySelector('.shop-product-card').dataset.productId);
+  d.querySelector('.shop-add').click();assert(d.querySelector('[data-shop-basket-count]').textContent==='1','basket count');
+  assert(d.querySelector('[data-shop-basket-total]').textContent===`৳ ${p.price.toLocaleString('en-BD')}`,'basket price');
+  d.querySelector('[data-remove]').click();assert(d.querySelector('[data-shop-basket-count]').textContent==='0','remove from basket');
+  cat.value='all';cat.dispatchEvent(new w.Event('change'));
+  const input=d.getElementById('shop-search');input.value='nonexistent-zzyyxx';input.dispatchEvent(new w.Event('input'));assert(!d.getElementById('shop-empty-state').hidden,'empty results');
+  input.value='ডিম';input.dispatchEvent(new w.Event('input'));assert(d.querySelectorAll('.shop-product-card').length>0,'Bengali search');
+  input.value='';input.dispatchEvent(new w.Event('input'));
+  const sort=d.getElementById('shop-sort');sort.value='price-low';sort.dispatchEvent(new w.Event('change'));
+  assert(api.products.find(p=>p.id===d.querySelector('.shop-product-card').dataset.productId).price===Math.min(...api.products.map(p=>p.price)),'price sorting');
+  d.documentElement.lang='bn';await wait();assert(d.getElementById('catalog-page').textContent.includes('পৃষ্ঠা'),'Bengali UI');
+  assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'mobile horizontal overflow');
+  document.getElementById('result').textContent='PASS: catalog count, 12 departments, pagination, category filtering, basket price/add/remove, empty state, Bengali search, sorting, language toggle, mobile overflow';
+ }catch(e){document.getElementById('result').textContent='FAIL: '+e.message;}
+})();
+</script>

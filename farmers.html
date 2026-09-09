@@ -1,48 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Farmers — Taza Khamar</title>
-  <meta name="description" content="Meet the verified farmers and fishers behind every Taza Khamar product." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232C8850'/%3E%3Cstop offset='100%25' stop-color='%23154A2A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='7' fill='url(%23g)'/%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18.3' cy='4.7' r='2.1' fill='%23F0932B'/%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/pages.css" />
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#3B6D45">
+  <meta name="description" content="Meet the farmers, fishers and makers behind URBOR's food."><title>Meet the farmers — URBOR</title>
+  <link rel="icon" type="image/png" href="content-assets/brand/Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="farmers.css">
 </head>
-<body data-page="farmers">
-  <a href="#main" class="skip-link">Skip to content</a>
-  <div id="site-header"></div>
+<body id="farmers-top">
+  <a class="skip-link" href="#farmers-main" data-en="Skip to farmers" data-bn="কৃষকদের কাছে যান">Skip to farmers</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="URBOR home"><img class="brand-logo" src="content-assets/brand/logo-urbor.png" alt="URBOR — মাটি থেকে মানুষের কাছে"></a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="shop.html" data-en="Shop fresh" data-bn="তাজা খাবার কিনুন">Shop fresh</a><a href="farmers.html" aria-current="page" data-en="Meet farmers" data-bn="কৃষকদের দেখুন">Meet farmers</a><a href="how-it-works.html" data-en="How it works" data-bn="যেভাবে কাজ করে">How it works</a><a href="index.html#journal" data-en="Journal" data-bn="জার্নাল">Journal</a></nav>
+    <div class="header-actions"><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language" aria-pressed="false"><span>EN</span><span>বাং</span></button><a class="basket-link" href="cart.html"><span class="basket-icon" aria-hidden="true">↗</span><span class="basket-label" data-en="Browse basket" data-bn="ঝুড়ি দেখুন">Browse basket</span></a><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+  </div><nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true" inert><a href="shop.html" data-en="Shop fresh" data-bn="তাজা খাবার কিনুন">Shop fresh <span>↗</span></a><a href="farmers.html" aria-current="page" data-en="Meet farmers" data-bn="কৃষকদের দেখুন">Meet farmers <span>↗</span></a><a href="how-it-works.html" data-en="How it works" data-bn="যেভাবে কাজ করে">How it works <span>↗</span></a><a href="index.html#journal" data-en="Journal" data-bn="জার্নাল">Journal <span>↗</span></a></nav></header>
 
-  <main id="main">
-    <section class="page-hero">
+  <main id="farmers-main">
+    <section class="farmers-hero"><div class="container farmers-hero__grid">
+      <div class="farmers-hero__copy reveal"><p class="eyebrow" data-en="THE HANDS BEHIND THE HARVEST" data-bn="ফসলের পেছনের মানুষ">THE HANDS BEHIND THE HARVEST</p><h1 data-en="Good food has a " data-bn="ভালো খাবারের আছে ">Good food has a <em data-en="first name." data-bn="একটি পরিচিত নাম।">first name.</em></h1><p data-en="Come closer to the people growing, catching and making the food on your table — across Bangladesh's fields, rivers and family yards." data-bn="বাংলাদেশের মাঠ, নদী আর পারিবারিক উঠান থেকে যারা আপনার টেবিলের খাবার ফলান, ধরেন ও তৈরি করেন—তাদের আরও কাছ থেকে জানুন।">Come closer to the people growing, catching and making the food on your table — across Bangladesh's fields, rivers and family yards.</p><a class="button button--mango" href="#network"><span data-en="Meet the network" data-bn="নেটওয়ার্ক দেখুন">Meet the network</span> ↓</a></div>
+      <div class="farmers-hero__portrait reveal reveal--delay"><img src="content-assets/farmers/harvest-field.jpg" alt="Tractor gathering hay in a harvested field"><span class="portrait-note"><strong>27</strong><span data-en="districts & growing" data-bn="জেলা এবং আরও বাড়ছে">districts & growing</span></span><span class="portrait-sticker" data-en="KNOW YOUR GROWER" data-bn="কৃষককে জানুন">KNOW YOUR GROWER</span></div>
+    </div><div class="farmers-marquee" aria-hidden="true">মাটি · মানুষ · মৌসুম · SOIL · PEOPLE · SEASON · মাটি · মানুষ · মৌসুম</div></section>
+
+    <section class="farmer-feature section-dark"><div class="container feature-grid">
+      <div class="feature-photo media reveal"><img src="content-assets/farmers/mitali-mango.jpg" alt="A ripe golden mango"><span>01 / RAJSHAHI</span></div>
+      <article class="feature-story reveal reveal--delay"><p class="eyebrow eyebrow--light" data-en="THIS MONTH'S FIELD NOTE" data-bn="এই মাসের মাঠের গল্প">THIS MONTH'S FIELD NOTE</p><h2 data-en="Mitali knows when a mango is " data-bn="মিতালি জানেন কখন আম ">Mitali knows when a mango is <em data-en="ready to travel." data-bn="যাত্রার জন্য প্রস্তুত।">ready to travel.</em></h2><blockquote data-en="“Colour can fool you. Fragrance never does.”" data-bn="“রঙ ভুল বোঝাতে পারে। গন্ধ কখনো নয়।”">“Colour can fool you. Fragrance never does.”</blockquote><p data-en="Her family tends old Himsagar trees outside Rajshahi. Every fruit is hand-sorted and sent when it can finish ripening beautifully at home." data-bn="রাজশাহীর বাইরে তার পরিবার পুরোনো হিমসাগর গাছের যত্ন নেয়। প্রতিটি ফল হাতে বাছাই করে পাঠানো হয়, যাতে আপনার ঘরেই সুন্দরভাবে পাকে।">Her family tends old Himsagar trees outside Rajshahi. Every fruit is hand-sorted and sent when it can finish ripening beautifully at home.</p><a class="text-link text-link--light" href="shop.html#shop-products" data-en="Shop Mitali's harvest" data-bn="মিতালির ফসল কিনুন">Shop Mitali's harvest <span>↗</span></a></article>
+    </div></section>
+
+    <section class="section farmer-network" id="network"><div class="container">
+      <div class="network-heading reveal"><div><p class="eyebrow" data-en="ACROSS BANGLADESH" data-bn="বাংলাদেশ জুড়ে">ACROSS BANGLADESH</p><h2 data-en="Meet your " data-bn="আপনার খাবারের ">Meet your <em data-en="food people." data-bn="মানুষদের জানুন।">food people.</em></h2></div><p data-en="Filter by landscape. Every profile shows the place, practice and food behind the name." data-bn="অঞ্চল অনুযায়ী দেখুন। প্রতিটি পরিচয়ে আছে নামের পেছনের জায়গা, চর্চা আর খাবারের গল্প।">Filter by landscape. Every profile shows the place, practice and food behind the name.</p></div>
+      <div class="region-filters reveal" aria-label="Filter farmers by region"><button class="region-filter is-active" type="button" data-region="all" aria-pressed="true" data-en="All places" data-bn="সব অঞ্চল">All places</button><button class="region-filter" type="button" data-region="fields" aria-pressed="false" data-en="Fields" data-bn="মাঠ">Fields</button><button class="region-filter" type="button" data-region="orchards" aria-pressed="false" data-en="Orchards" data-bn="বাগান">Orchards</button><button class="region-filter" type="button" data-region="rivers" aria-pressed="false" data-en="Rivers" data-bn="নদী">Rivers</button><button class="region-filter" type="button" data-region="homes" aria-pressed="false" data-en="Homesteads" data-bn="বাড়ির খামার">Homesteads</button></div><p class="network-status" id="network-status" aria-live="polite"></p>
+      <div class="network-grid">
+        <article class="network-card reveal" data-farmer-region="fields"><div class="network-card__image media"><img src="content-assets/farmers/harvest-field.jpg" alt="Tractor gathering hay in a harvested field"><span>01</span></div><div class="network-card__body"><p>Savar · Dhaka</p><h3>Rahman Family Farm</h3><span data-en="Leafy greens · 3 generations" data-bn="শাকপাতা · ৩ প্রজন্ম">Leafy greens · 3 generations</span><a href="shop.html#shop-products" data-en="Shop their greens ↗" data-bn="তাদের শাক কিনুন ↗">Shop their greens ↗</a><a class="farmer-profile-link" href="farmer-rahman-family-farm.html" data-en="View profile ↗" data-bn="পরিচয় দেখুন ↗">View profile ↗</a></div></article>
+        <article class="network-card card-mango reveal reveal--delay" data-farmer-region="orchards"><div class="network-card__image media"><img src="content-assets/farmers/mitali-mango.jpg" alt="A ripe golden mango"><span>02</span></div><div class="network-card__body"><p>Rajshahi · Mango country</p><h3>Mitali Mango House</h3><span data-en="Himsagar mangoes · Tree ripened" data-bn="হিমসাগর আম · গাছে পাকা">Himsagar mangoes · Tree ripened</span><a href="shop.html#shop-products" data-en="Shop the orchard ↗" data-bn="বাগানের ফল কিনুন ↗">Shop the orchard ↗</a><a class="farmer-profile-link" href="farmer-mitali-mango-house.html" data-en="View profile ↗" data-bn="পরিচয় দেখুন ↗">View profile ↗</a></div></article>
+        <article class="network-card card-sky reveal" data-farmer-region="rivers"><div class="network-card__image media"><img src="content-assets/products/river-fish.jpg" alt="Fresh fish prepared for cooking"><span>03</span></div><div class="network-card__body"><p>Mawa · Padma river</p><h3>Padma Catch</h3><span data-en="River fish · Small daily catch" data-bn="নদীর মাছ · প্রতিদিনের ছোট ধরা">River fish · Small daily catch</span><a href="shop.html#shop-products" data-en="See today's catch ↗" data-bn="আজকের মাছ দেখুন ↗">See today's catch ↗</a><a class="farmer-profile-link" href="farmer-padma-catch.html" data-en="View profile ↗" data-bn="পরিচয় দেখুন ↗">View profile ↗</a></div></article>
+        <article class="network-card card-tomato reveal reveal--delay" data-farmer-region="fields"><div class="network-card__image media"><img src="content-assets/farmers/garden-seedlings.jpg" alt="Young green seedlings growing in pots"><span>04</span></div><div class="network-card__body"><p>Narayanganj · River edge</p><h3>Nahar's Garden</h3><span data-en="Tomatoes · Slow grown" data-bn="টমেটো · ধীরে ফলানো">Tomatoes · Slow grown</span><a href="shop.html#shop-products" data-en="Visit the garden ↗" data-bn="বাগানটি দেখুন ↗">Visit the garden ↗</a><a class="farmer-profile-link" href="farmer-nahars-garden.html" data-en="View profile ↗" data-bn="পরিচয় দেখুন ↗">View profile ↗</a></div></article>
+        <article class="network-card card-mint reveal" data-farmer-region="homes"><div class="network-card__image media"><img src="content-assets/products/free-range-eggs.jpg" alt="A carton of fresh eggs"><span>05</span></div><div class="network-card__body"><p>Manikganj · Family yard</p><h3>Maya's Homestead</h3><span data-en="Free-range eggs · Small flock" data-bn="দেশি ডিম · ছোট ঝাঁক">Free-range eggs · Small flock</span><a href="shop.html#shop-products" data-en="Shop Maya's eggs ↗" data-bn="মায়ার ডিম কিনুন ↗">Shop Maya's eggs ↗</a><a class="farmer-profile-link" href="farmer-mayas-homestead.html" data-en="View profile ↗" data-bn="পরিচয় দেখুন ↗">View profile ↗</a></div></article>
+        <article class="network-card card-plum reveal reveal--delay" data-farmer-region="homes"><div class="network-card__image media"><img src="content-assets/farmers/dairy-cows.jpg" alt="Cows in a pasture at sunset"><span>06</span></div><div class="network-card__body"><p>Madhupur · Tangail</p><h3>Madhupur Dairy</h3><span data-en="Fresh milk · Morning milking" data-bn="টাটকা দুধ · সকালের দোহন">Fresh milk · Morning milking</span><a href="shop.html#shop-products" data-en="Shop the dairy ↗" data-bn="দুধ কিনুন ↗">Shop the dairy ↗</a><a class="farmer-profile-link" href="farmer-madhupur-dairy.html" data-en="View profile ↗" data-bn="পরিচয় দেখুন ↗">View profile ↗</a></div></article>
+      </div>
+    </div></section>
+    <section class="section farmer-profile" id="farmer-profile" aria-labelledby="farmer-profile-heading">
       <div class="container">
-        <h1 data-i18n="farmerspage.title"></h1>
-        <p data-i18n="farmerspage.lead"></p>
+        <p class="eyebrow" data-en="A CLOSER LOOK" data-bn="আরও কাছ থেকে">A CLOSER LOOK</p>
+        <h2 id="farmer-profile-heading" data-en="Farmer profile." data-bn="কৃষকের পরিচয়।">Farmer profile.</h2>
+        <div class="farmer-profile__grid">
+          <figure class="farmer-profile__photo"><img id="profile-image" src="content-assets/farmers/harvest-field.jpg" alt="Tractor gathering hay in a harvested field" loading="lazy"><figcaption data-en="Illustrative farm and produce photography." data-bn="খামার ও পণ্যের প্রতীকী ছবি।">Illustrative farm and produce photography.</figcaption></figure>
+          <article class="farmer-profile__details" aria-live="polite">
+            <p class="eyebrow" data-en="MEET THE PRODUCER" data-bn="উৎপাদককে জানুন">MEET THE PRODUCER</p>
+            <h3 id="profile-name">Rahman Family Farm</h3>
+            <dl><div><dt data-en="Location" data-bn="অবস্থান">Location</dt><dd id="profile-location">Savar · Dhaka</dd></div><div><dt data-en="Produce & practice" data-bn="পণ্য ও চর্চা">Produce &amp; practice</dt><dd id="profile-produce" data-en="Leafy greens · 3 generations" data-bn="শাকপাতা · ৩ প্রজন্ম">Leafy greens · 3 generations</dd></div></dl>
+            <a class="button button--plum" href="shop.html#shop-products"><span data-en="Explore fresh food" data-bn="তাজা খাবার দেখুন">Explore fresh food</span> ↗</a>
+            <a class="farmer-profile__back" href="#network" data-en="Meet another producer ↑" data-bn="অন্য উৎপাদককে জানুন ↑">Meet another producer ↑</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="division-filter" id="divisionFilter"></div>
-        <div class="grid grid-4" id="farmersFullGrid"></div>
-      </div>
-    </section>
+    <section class="farmer-values section-mango"><div class="container values-grid"><div><p class="eyebrow" data-en="A FAIRER SHORT ROUTE" data-bn="ন্যায্য, ছোট পথ">A FAIRER SHORT ROUTE</p><h2 data-en="What partnership " data-bn="অংশীদারিত্বের ">What partnership <em data-en="means here." data-bn="অর্থ এখানে।">means here.</em></h2></div><div class="value-list"><article><span>01</span><div><h3 data-en="Names stay attached" data-bn="নাম সঙ্গে থাকে">Names stay attached</h3><p data-en="You see who made your food and where it came from." data-bn="খাবারটি কে তৈরি করেছেন এবং কোথা থেকে এসেছে তা আপনি জানেন।">You see who made your food and where it came from.</p></div></article><article><span>02</span><div><h3 data-en="Seasons lead" data-bn="ঋতুই পথ দেখায়">Seasons lead</h3><p data-en="We follow the land instead of forcing an endless shelf." data-bn="অন্তহীন তাকের বদলে আমরা মাটি ও ঋতুকে অনুসরণ করি।">We follow the land instead of forcing an endless shelf.</p></div></article><article><span>03</span><div><h3 data-en="Feedback travels back" data-bn="মতামত ফিরে যায়">Feedback travels back</h3><p data-en="Your notes reach the people who picked and packed it." data-bn="আপনার মতামত পৌঁছে যায় যারা খাবার তুলেছেন ও গুছিয়েছেন তাদের কাছে।">Your notes reach the people who picked and packed it.</p></div></article></div></div></section>
+    <section class="farmers-cta"><div class="container farmers-cta__inner"><p data-en="Start with the person. Stay for the flavour." data-bn="মানুষকে দিয়ে শুরু করুন। স্বাদের জন্য থেকে যান।">Start with the person. Stay for the flavour.</p><h2 data-en="Bring their harvest " data-bn="তাদের ফসল ">Bring their harvest <em data-en="to your table." data-bn="আপনার টেবিলে আনুন।">to your table.</em></h2><a class="button button--plum button--large" href="shop.html#shop-products"><span data-en="Shop fresh food" data-bn="তাজা খাবার কিনুন">Shop fresh food</span> ↗</a></div></section>
   </main>
-
-  <div id="site-footer"></div>
-
-  <script src="assets/js/icons.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/render.js"></script>
-  <script src="assets/js/farmers.js"></script>
-</body>
-</html>
+  <footer class="site-footer section-dark">
+      <div class="container footer-top"><a class="brand brand--footer" href="index.html" aria-label="URBOR home"><img class="brand-logo" src="content-assets/brand/logo-urbor.png" alt="URBOR — মাটি থেকে মানুষের কাছে"></a><p class="footer-promise" data-en="মাটি থেকে মানুষের কাছে" data-bn="মাটি থেকে মানুষের কাছে">মাটি থেকে মানুষের কাছে</p><a class="footer-up" href="#farmers-top" data-en="Back to top ↑" data-bn="উপরে ফিরে যান ↑">Back to top ↑</a></div>
+      <div class="container footer-grid"><div><p class="footer-label" data-en="SHOP" data-bn="কিনুন">SHOP</p><a href="shop.html#shop-products" data-en="All fresh food" data-bn="সব তাজা খাবার">All fresh food</a><a href="shop.html#shop-products" data-en="Seasonal picks" data-bn="মৌসুমি পছন্দ">Seasonal picks</a><a href="farmers.html" data-en="Our farmers" data-bn="আমাদের কৃষক">Our farmers</a></div><div><p class="footer-label" data-en="LEARN" data-bn="জানুন">LEARN</p><a href="how-it-works.html" data-en="How it works" data-bn="যেভাবে কাজ করে">How it works</a><a href="index.html#why-urbor" data-en="Why URBOR" data-bn="কেন উর্বর">Why URBOR</a><a href="journal.html" data-en="Journal" data-bn="জার্নাল">Journal</a><a href="invest.html" data-en="Investment" data-bn="বিনিয়োগ">Investment</a></div><div><p class="footer-label" data-en="SAY HELLO" data-bn="যোগাযোগ">SAY HELLO</p><a href="mailto:hello@urbor.bd">hello@urbor.bd</a><a href="index.html#newsletter">Instagram ↗</a><a href="index.html#newsletter">Facebook ↗</a></div><div class="footer-aside"><p data-en="Built for the people who grow, cook and share Bangladesh's best." data-bn="যারা বাংলাদেশে সেরা খাবার ফলান, রান্না করেন আর ভাগ করে নেন — তাদের জন্য।">Built for the people who grow, cook and share Bangladesh's best.</p><span class="footer-sun" aria-hidden="true">✳</span></div></div>
+      <div class="container footer-bottom"><span>© 2026 URBOR</span><span data-en="Made with care in Bangladesh" data-bn="বাংলাদেশে যত্নে তৈরি">Made with care in Bangladesh</span><span>Privacy · Terms</span></div>
+    </footer>
+  <script src="script.js"></script><script src="farmers.js"></script>
+</body></html>

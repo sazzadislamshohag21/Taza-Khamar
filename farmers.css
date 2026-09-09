@@ -1,0 +1,85 @@
+.desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.farmers-hero { overflow: hidden; background: var(--mint); }
+.farmers-hero__grid { display: grid; grid-template-columns: 5fr 6fr; min-height: 720px; align-items: center; gap: clamp(40px, 7vw, 110px); padding-block: clamp(70px, 8vw, 120px); }
+.farmers-hero__copy h1 { max-width: 760px; margin-bottom: 30px; font-size: clamp(62px, 8vw, 130px); line-height: .82; }
+.farmers-hero__copy h1 em { color: var(--leaf); }
+.farmers-hero__copy > p:not(.eyebrow) { max-width: 590px; margin-bottom: 32px; font-size: clamp(17px, 1.35vw, 21px); }
+.farmers-hero__portrait { position: relative; min-height: 590px; margin-right: 4vw; }
+.farmers-hero__portrait > img { position: absolute; inset: 0; clip-path: polygon(8% 0,100% 4%,94% 100%,0 92%); filter: saturate(.88); }
+.portrait-note { position: absolute; right: -45px; bottom: 38px; display: grid; width: 170px; min-height: 140px; place-content: center; padding: 20px; background: var(--mango); border: 1px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); transform: rotate(3deg); }
+.portrait-note strong { font: 800 62px/.8 "Bricolage Grotesque"; }
+.portrait-note span { margin-top: 10px; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.portrait-sticker { position: absolute; top: 28px; left: -42px; display: grid; width: 116px; height: 116px; place-items: center; padding: 18px; border-radius: 50%; color: var(--cream); background: var(--tomato); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-align: center; transform: rotate(-10deg); }
+.farmers-marquee { padding: 17px 0; overflow: hidden; color: var(--cream); background: var(--leaf); border-block: 1px solid var(--ink); font: 700 clamp(20px,2.2vw,34px)/1 "Bricolage Grotesque"; letter-spacing: .04em; text-align: center; white-space: nowrap; }
+.farmer-feature { padding-block: var(--section-space); }
+.feature-grid { display: grid; grid-template-columns: 6fr 5fr; align-items: center; gap: clamp(50px, 8vw, 130px); }
+.feature-photo { position: relative; height: min(72vw, 760px); max-height: 760px; transform: rotate(-1.5deg); }
+.feature-photo img { clip-path: polygon(0 5%,96% 0,100% 95%,6% 100%); }
+.feature-photo span { position: absolute; right: -15px; bottom: 22px; padding: 12px 17px; color: var(--ink); background: var(--sky); border: 1px solid var(--ink); font-size: 11px; font-weight: 800; }
+.feature-story h2 { font-size: clamp(48px, 5.5vw, 86px); }
+.feature-story blockquote { margin: 40px 0 22px; padding-left: 24px; border-left: 5px solid var(--mango); font: 700 clamp(23px,2.4vw,37px)/1.08 "Bricolage Grotesque"; }
+.feature-story > p:not(.eyebrow) { max-width: 610px; color: rgba(245,240,230,.8); font-size: 17px; }
+.network-heading { display: grid; grid-template-columns: 2fr 1fr; align-items: end; gap: 50px; }
+.network-heading > p { max-width: 440px; font-size: 18px; }
+.region-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 54px 0 16px; }
+.region-filter { padding: 12px 20px; color: var(--ink); background: transparent; border: 1px solid var(--ink); font-weight: 700; }
+.region-filter:hover, .region-filter.is-active { color: var(--cream); background: var(--plum); }
+.network-status { min-height: 24px; margin-bottom: 22px; color: var(--leaf); font-size: 13px; font-weight: 700; }
+.network-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(24px,3.2vw,52px) clamp(18px,2.5vw,38px); }
+.network-card { overflow: hidden; background: var(--white); border: 1px solid var(--ink); transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.network-card:nth-child(3n + 2) { transform: translateY(46px); }
+.network-card:hover { box-shadow: 9px 9px 0 var(--ink); transform: translate(-4px,-4px); }
+.network-card:nth-child(3n + 2):hover { transform: translate(-4px,42px); }
+.network-card__image { position: relative; height: 360px; overflow: hidden; border-bottom: 1px solid var(--ink); }
+.network-card__image img { transition: transform .5s var(--ease); }
+.network-card:hover img { transform: scale(1.035); }
+.network-card__image span { position: absolute; top: 0; left: 0; padding: 10px 13px; background: var(--mango); border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); font-weight: 800; }
+.network-card__body { display: grid; min-height: 225px; padding: 24px; }
+.network-card__body p { margin-bottom: 10px; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.network-card__body h3 { margin-bottom: 12px; font-size: clamp(29px,2.5vw,42px); line-height: .95; }
+.network-card__body > span { font-size: 14px; }
+.network-card__body a { align-self: end; margin-top: 26px; font-size: 13px; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+.card-mango .network-card__body { background: var(--mango); }.card-sky .network-card__body { background: var(--sky); }.card-tomato .network-card__body { color: var(--cream); background: var(--tomato); }.card-mint .network-card__body { background: var(--mint); }.card-plum .network-card__body { color: var(--cream); background: var(--plum); }
+.farmer-profile { background: var(--mint); border-top: 1px solid var(--ink); }
+.farmer-profile__grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(28px,6vw,90px); align-items: center; margin-top: 45px; }
+.farmer-profile__photo { margin: 0; min-width: 0; }
+.farmer-profile__photo img { width: 100%; height: clamp(280px,35vw,480px); object-fit: cover; border: 1px solid var(--ink); }
+.farmer-profile__photo figcaption { margin-top: 12px; font-size: 12px; }
+.farmer-profile__details { min-width: 0; }
+.profile-page-title { font-size: clamp(44px,5.5vw,88px); line-height: .95; overflow-wrap: anywhere; }
+.profile-page-story { max-width: 960px; }
+.profile-page-story > p:not(.eyebrow) { margin-block: 32px; max-width: 700px; font-size: 20px; line-height: 1.6; }
+.farmer-profile__details h3 { font-size: clamp(36px,4.5vw,68px); line-height: 1; overflow-wrap: anywhere; }
+.farmer-profile__details dl { margin: 30px 0; }
+.farmer-profile__details dl > div { padding: 18px 0; border-top: 1px solid var(--ink); }
+.farmer-profile__details dt { font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+.farmer-profile__details dd { margin: 0; font-size: 19px; }
+.farmer-profile__back { display: block; margin-top: 24px; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 700px) { .farmer-profile__grid { grid-template-columns: 1fr; } }
+.farmer-values { padding-block: var(--section-space); border-block: 1px solid var(--ink); }
+.values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px,10vw,160px); }
+.value-list article { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 28px 0; border-top: 1px solid var(--ink); }
+.value-list article:last-child { border-bottom: 1px solid var(--ink); }
+.value-list article > span { font-weight: 800; }
+.value-list h3 { margin-bottom: 8px; font-size: 30px; }
+.value-list p { margin-bottom: 0; }
+.farmers-cta { padding-block: clamp(90px,13vw,180px); text-align: center; }
+.farmers-cta__inner { max-width: 1100px; }
+.farmers-cta p { margin-bottom: 28px; color: var(--leaf); font-weight: 700; }
+.farmers-cta h2 { margin-bottom: 45px; }
+@media (max-width: 900px) {
+  .farmers-hero__grid,.feature-grid,.values-grid { grid-template-columns: 1fr; }
+  .farmers-hero__portrait { min-height: 520px; margin: 0 28px 0 0; }
+  .feature-photo { height: 620px; }
+  .network-grid { grid-template-columns: repeat(2,1fr); }
+  .network-card:nth-child(3n + 2) { transform: none; }
+  .network-card:nth-child(3n + 2):hover { transform: translate(-4px,-4px); }
+}
+@media (max-width: 620px) {
+  .farmers-hero__grid { min-height: auto; padding-top: 58px; }
+  .farmers-hero__copy h1 { font-size: clamp(56px,18vw,86px); }
+  .farmers-hero__portrait { min-height: 430px; margin-right: 10px; }
+  .portrait-note { right: -4px; bottom: 12px; width: 132px; min-height: 112px; }.portrait-note strong { font-size: 46px; }.portrait-sticker { left: -10px; width: 92px; height: 92px; }
+  .feature-photo { height: 470px; }.network-heading { grid-template-columns: 1fr; gap: 25px; }.network-grid { grid-template-columns: 1fr; }.network-card__image { height: 330px; }.values-grid { gap: 55px; }
+}
+@media (prefers-reduced-motion: reduce) { .network-card,.network-card__image img { transition: none; }.network-card:nth-child(3n + 2) { transform: none; } }

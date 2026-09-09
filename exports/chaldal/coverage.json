@@ -1,0 +1,225 @@
+{
+  "started_at_utc": "2026-09-08T00:32:23.858670+00:00",
+  "finished_at_utc": "2026-09-08T00:33:32.722990+00:00",
+  "source": "https://chaldal.com/",
+  "endpoint": "https://catalog.chaldal.com/searchOld",
+  "city": "Dhaka",
+  "warehouse_id": 8,
+  "unique_products": 3386,
+  "reported_matches": 3386,
+  "pages": [
+    {
+      "page": 1,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 2,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 3,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 4,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 5,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 6,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 7,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 8,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 9,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 10,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 11,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 12,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 13,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 14,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 15,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 16,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 17,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 18,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 19,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 20,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 21,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 22,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 23,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 24,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 25,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 26,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 27,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 28,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 29,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 30,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 31,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 32,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 33,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    },
+    {
+      "page": 34,
+      "nbPages": 34,
+      "hitsPerPage": 100,
+      "nbHits": 3386
+    }
+  ],
+  "sitemap_urls": 17437,
+  "unmatched_sitemap_urls": 13868,
+  "scope": "All pages of the public default-Dhaka grocery search; not all sitemap product pages or all cities.",
+  "limitations": [
+    "Inventory and prices can change during export.",
+    "Out-of-stock and other-location products may be absent.",
+    "Unmatched sitemap URLs include products and non-product pages.",
+    "Images are preserved as source URLs, not downloaded files."
+  ]
+}

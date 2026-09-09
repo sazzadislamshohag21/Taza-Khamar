@@ -1,40 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Cart — Taza Khamar</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232C8850'/%3E%3Cstop offset='100%25' stop-color='%23154A2A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='7' fill='url(%23g)'/%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18.3' cy='4.7' r='2.1' fill='%23F0932B'/%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/pages.css" />
-</head>
-<body data-page="cart">
-  <a href="#main" class="skip-link">Skip to content</a>
-  <div id="site-header"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4C1D38">
+    <meta name="description" content="Shop fresh food from Bangladeshi farmers, fishers, and food makers with URBOR.">
+    <title>URBOR — Your basket</title>
+    <link rel="icon" type="image/png" href="content-assets/brand/Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=catalog-20260908">
+    <link rel="stylesheet" href="cart.css?v=1">
+  </head>
+  <body class="cart-page">
+    <a class="skip-link" href="#cart-content" data-en="Skip to products" data-bn="পণ্যে যান">Skip to products</a>
 
-  <main id="main">
-    <div class="container">
-      <nav class="breadcrumb" id="crumb"></nav>
-      <h1 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-lg)" data-i18n="cart.title"></h1>
+    <header class="site-header" id="shop-top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="URBOR home">
+          <img class="brand-logo" src="content-assets/brand/logo-urbor.png" alt="URBOR — মাটি থেকে মানুষের কাছে">
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="shop.html" aria-current="page" data-en="Shop fresh" data-bn="তাজা খাবার কিনুন">Shop fresh</a>
+          <a href="farmers.html" data-en="Meet farmers" data-bn="কৃষকদের দেখুন">Meet farmers</a>
+          <a href="how-it-works.html" data-en="How it works" data-bn="যেভাবে কাজ করে">How it works</a>
+          <a href="journal.html" data-en="Journal" data-bn="জার্নাল">Journal</a>
+        </nav>
+        <div class="header-actions">
+          <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language" aria-pressed="false"><span class="language-toggle__globe" aria-hidden="true">◎</span><span data-en="বাংলা" data-bn="English">বাংলা</span></button>
+          <a class="basket-link" href="cart.html" aria-label="Browse your basket"><span class="basket-icon" aria-hidden="true">↗</span><span class="basket-label" data-en="Browse basket" data-bn="ঝুড়ি দেখুন">Browse basket</span></a>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true" inert>
+        <a href="shop.html" data-en="Shop fresh" data-bn="তাজা খাবার কিনুন">Shop fresh <span>↗</span></a>
+        <a href="farmers.html" data-en="Meet farmers" data-bn="কৃষকদের দেখুন">Meet farmers <span>↗</span></a>
+        <a href="how-it-works.html" data-en="How it works" data-bn="যেভাবে কাজ করে">How it works <span>↗</span></a>
+        <a href="journal.html" data-en="Journal" data-bn="জার্নাল">Journal <span>↗</span></a>
+      </nav>
+    </header>
 
-      <div id="cartContent"></div>
-    </div>
-  </main>
+<main id="cart-content" class="container cart-main">
+<a class="cart-back" href="shop.html" data-en="← Keep exploring" data-bn="← আরও দেখুন">← Keep exploring</a>
+<div class="cart-heading"><div><p class="eyebrow" data-en="GOOD PICKS. GREAT TASTE." data-bn="ভালো পছন্দ। দারুণ স্বাদ।">GOOD PICKS. GREAT TASTE.</p><h1><span data-en="Your basket," data-bn="আপনার ঝুড়ি,">Your basket,</span><br><em data-en="full of good." data-bn="ভালোয় ভরা।">full of good.</em></h1></div><div class="cart-stamp" aria-hidden="true">✳</div></div>
+<p id="cart-status" role="status">Loading your basket…</p>
+<div id="cart-layout" class="cart-layout" hidden><section aria-label="Basket items"><div class="cart-list-heading"><h2 data-en="The good stuff" data-bn="ভালো জিনিসগুলো">The good stuff</h2><span id="cart-count"></span></div><div id="cart-items"></div><a class="cart-continue" href="shop.html" data-en="+ Add a little more" data-bn="+ আরও কিছু যোগ করুন">+ Add a little more</a></section>
+<aside class="cart-summary"><p class="eyebrow" data-en="YOUR EVERYDAY GOODNESS" data-bn="প্রতিদিনের ভালো কিছু">YOUR EVERYDAY GOODNESS</p><h2 data-en="All together." data-bn="সব একসাথে।">All together.</h2><div class="summary-row"><span data-en="Items subtotal" data-bn="পণ্যের মোট মূল্য">Items subtotal</span><strong id="cart-subtotal"></strong></div><div class="summary-row" id="cart-savings-row"><span data-en="You saved" data-bn="আপনার সাশ্রয়">You saved</span><strong id="cart-savings"></strong></div><div class="summary-row"><span data-en="Delivery" data-bn="ডেলিভারি">Delivery</span><span data-en="To be confirmed" data-bn="পরে নিশ্চিত হবে">To be confirmed</span></div><div class="summary-total"><span data-en="Subtotal" data-bn="উপমোট">Subtotal</span><strong id="cart-total"></strong></div><p class="cart-summary-note" data-en="Delivery charges are not included." data-bn="ডেলিভারি চার্জ অন্তর্ভুক্ত নয়।">Delivery charges are not included.</p><button class="button button--mango" id="cart-checkout" disabled data-en="Checkout coming soon" data-bn="শীঘ্রই চেকআউট চালু হবে">Checkout coming soon</button><p class="cart-summary-note" data-en="You can build and save your basket. Online ordering is not available yet." data-bn="ঝুড়ি তৈরি ও সংরক্ষণ করতে পারেন। অনলাইন অর্ডার এখনও চালু হয়নি।">You can build and save your basket. Online ordering is not available yet.</p><div class="cart-summary-foot"><span aria-hidden="true">⌖</span><span data-en="Your picks, ready for your next visit." data-bn="পরের ভিজিটের জন্য পছন্দগুলো সংরক্ষিত।">Your picks, ready for your next visit.</span></div></aside></div>
+<section id="cart-empty" class="cart-empty" hidden><span aria-hidden="true">✳</span><h2 data-en="Good things start with a pick." data-bn="ভালো কিছুর শুরু একটি পছন্দে।">Good things start with a pick.</h2><p data-en="Your basket is empty. Explore the shop and find your everyday favourites." data-bn="আপনার ঝুড়ি খালি। দোকান ঘুরে পছন্দের পণ্য খুঁজে নিন।">Your basket is empty. Explore the shop and find your everyday favourites.</p><a class="button button--mango" href="shop.html" data-en="Explore the shop ↗" data-bn="দোকান ঘুরে দেখুন ↗">Explore the shop ↗</a></section></main>
+    <footer class="site-footer section-dark">
+      <div class="container footer-top"><a class="brand brand--footer" href="index.html" aria-label="URBOR home"><img class="brand-logo" src="content-assets/brand/logo-urbor.png" alt="URBOR — মাটি থেকে মানুষের কাছে"></a><p class="footer-promise" data-en="মাটি থেকে মানুষের কাছে" data-bn="মাটি থেকে মানুষের কাছে">মাটি থেকে মানুষের কাছে</p><a class="footer-up" href="#shop-top" data-en="Back to top ↑" data-bn="উপরে ফিরে যান ↑">Back to top ↑</a></div>
+      <div class="container footer-grid"><div><p class="footer-label" data-en="SHOP" data-bn="কিনুন">SHOP</p><a href="shop.html#shop-products" data-en="All fresh food" data-bn="সব তাজা খাবার">All fresh food</a><a href="shop.html#shop-products" data-en="Seasonal picks" data-bn="মৌসুমি পছন্দ">Seasonal picks</a><a href="farmers.html" data-en="Our farmers" data-bn="আমাদের কৃষক">Our farmers</a></div><div><p class="footer-label" data-en="LEARN" data-bn="জানুন">LEARN</p><a href="how-it-works.html" data-en="How it works" data-bn="যেভাবে কাজ করে">How it works</a><a href="index.html#why-urbor" data-en="Why URBOR" data-bn="কেন উর্বর">Why URBOR</a><a href="journal.html" data-en="Journal" data-bn="জার্নাল">Journal</a><a href="invest.html" data-en="Investment" data-bn="বিনিয়োগ">Investment</a></div><div><p class="footer-label" data-en="SAY HELLO" data-bn="যোগাযোগ">SAY HELLO</p><a href="mailto:hello@urbor.bd">hello@urbor.bd</a><a href="index.html#newsletter">Instagram ↗</a><a href="index.html#newsletter">Facebook ↗</a></div><div class="footer-aside"><p data-en="Built for the people who grow, cook and share Bangladesh's best." data-bn="যারা বাংলাদেশে সেরা খাবার ফলান, রান্না করেন আর ভাগ করে নেন — তাদের জন্য।">Built for the people who grow, cook and share Bangladesh's best.</p><span class="footer-sun" aria-hidden="true">✳</span></div></div>
+      <div class="container footer-bottom"><span>© 2026 URBOR</span><span data-en="Made with care in Bangladesh" data-bn="বাংলাদেশে যত্নে তৈরি">Made with care in Bangladesh</span><span>Privacy · Terms</span></div>
+    </footer>
 
-  <div id="site-footer"></div>
-
-  <script src="assets/js/icons.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/render.js"></script>
-  <script src="assets/js/cart-page.js"></script>
-</body>
-</html>
+<script src="script.js"></script><script src="catalog-loader.js?v=1"></script><script src="cart.js?v=1"></script></body></html>

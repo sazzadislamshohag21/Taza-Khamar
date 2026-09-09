@@ -1,0 +1,48 @@
+.social-profile { background:#eee9df; padding:24px 0 80px; }.social-shell { max-width:1240px; }.social-back { display:inline-block; margin-bottom:20px; font-size:14px; font-weight:700; }.social-profile-header { background:var(--white); border:1px solid #cfc5b7; border-radius:16px; overflow:hidden; }.social-cover { position:relative; height:320px; background:var(--mango); overflow:hidden; }.social-cover img { position:absolute; right:0; width:55%; height:100%; object-fit:cover; mix-blend-mode:multiply; }.social-cover > div { position:relative; padding:55px 40px; max-width:60%; }.social-cover p { font-size:11px; letter-spacing:.12em; font-weight:800; }.social-cover strong { font:800 clamp(32px,4vw,56px)/1 "Bricolage Grotesque",sans-serif; }.social-identity { display:flex; align-items:center; flex-wrap:wrap; gap:24px; padding:0 32px 26px; }.social-avatar { position:relative; margin-top:-36px; display:grid; place-items:center; width:140px; height:140px; flex-shrink:0; border:6px solid var(--white); border-radius:50%; background:var(--leaf); color:var(--cream); font:800 48px "Bricolage Grotesque",sans-serif; }.social-name { flex:1; min-width:200px; padding-top:24px; }.social-name .eyebrow { margin-bottom:8px; }.social-name h1 { font-size:clamp(32px,3.4vw,48px); line-height:1; margin-bottom:12px; }.social-name > p:last-child { font-size:13px; margin-bottom:0; }.social-actions { display:flex; flex-wrap:wrap; gap:10px; padding-top:20px; }.social-actions .button { font-size:12px; padding:12px 16px; }.social-nav { display:flex; gap:8px; margin:0 32px; border-top:1px solid #d8d0c4; overflow-x:auto; }.social-nav a { padding:20px; font-size:14px; font-weight:700; border-bottom:3px solid transparent; }.social-nav a:hover,.social-nav a:focus-visible { color:var(--leaf); border-bottom-color:var(--leaf); }.social-status:empty { display:none; }.social-status { margin:0; padding:0 32px 16px; font-size:13px; }.social-columns { display:grid; grid-template-columns:minmax(0, .8fr) minmax(0,1.4fr); gap:24px; margin-top:24px; }.social-card { padding:28px; background:var(--white); border:1px solid #d8d0c4; border-radius:14px; margin-bottom:24px; scroll-margin-top:15px; }.social-card h2 { font-size:25px; line-height:1.15; margin-bottom:20px; }.social-card p { font-size:15px; line-height:1.65; }.social-card dl { margin:24px 0; }.social-card dl > div { padding:13px 0; border-top:1px solid #e5ded2; }.social-card dt { color:#625b50; font-size:12px; }.social-card dd { margin:5px 0 0; font-size:14px; font-weight:600; }.social-contact { font-size:13px; text-decoration:underline; text-underline-offset:4px; }.social-gallery { display:block; margin-bottom:12px; }.social-gallery img { width:100%; height:220px; object-fit:cover; border-radius:8px; }.social-card small { display:block; color:#625b50; font-size:11px; }.social-other { display:flex; align-items:center; gap:12px; padding:15px 0; border-top:1px solid #e5ded2; font-size:13px; }.social-other > span,.social-mini-avatar { display:grid; place-items:center; width:42px; height:42px; flex-shrink:0; border-radius:50%; background:var(--mint); font-weight:700; }.social-other > div { flex:1; }.social-post-author { display:flex; align-items:center; gap:12px; margin-bottom:30px; font-size:14px; }.social-post-author small { margin-top:4px; }.social-story h2 { font-size:clamp(28px,3vw,40px); }.social-story blockquote { margin:28px 0; padding:22px; border-left:4px solid var(--mango); background:var(--cream); font-size:22px; }.social-story cite { display:block; font-size:13px; margin-top:12px; font-style:normal; }.social-story figure { margin:0; }.social-story figure img { width:100%; max-height:400px; object-fit:cover; border-radius:8px; }.social-story figcaption { margin-top:10px; font-size:11px; color:#625b50; }
+@media(max-width:800px) { .social-columns { grid-template-columns:1fr; }.social-cover { height:260px; }.social-identity { gap:16px; padding-inline:20px; }.social-actions { width:100%; padding-top:0; }.social-cover > div { padding:32px 24px; }.social-avatar { width:110px; height:110px; font-size:36px; }.social-nav { margin-inline:12px; }.social-nav a { padding:17px 13px; } }
+@media(max-width:480px) { .social-name { min-width:100%; padding-top:0; }.social-cover strong { font-size:32px; }.social-cover > div { max-width:80%; }.social-cover img { opacity:.65; }.social-card { padding:22px; }.social-actions .button { flex:1; } }
+
+.social-profile-header { box-shadow:0 6px 24px rgba(29,26,23,.04); }
+.social-shell > .social-nav { position:sticky; top:82px; z-index:20; margin:16px 0 0; border:1px solid #d8d0c4; border-radius:12px; background:var(--white); box-shadow:0 4px 12px rgba(29,26,23,.05); }
+.social-nav a { min-height:48px; flex:1; text-align:center; white-space:nowrap; }
+.social-nav a[aria-current=location] { color:var(--leaf); background:#edf3e7; border-bottom-color:var(--leaf); }
+.social-card { scroll-margin-top:85px; }
+.social-identity .button { min-height:44px; }
+.social-produce { background:var(--mint); }
+.social-name h1 { overflow-wrap:anywhere; }
+.social-card a:focus-visible { outline:3px solid var(--leaf); outline-offset:5px; }
+@media(max-width:800px) { .social-shell > .social-nav { top:70px; }.social-columns { display:flex; flex-direction:column; }.social-feed { order:-1; }.social-columns aside { display:grid; grid-template-columns:1fr; }.social-cover > div { background:linear-gradient(90deg,var(--mango) 65%,transparent); }.social-card { scroll-margin-top:80px; } }
+.social-avatar { overflow:hidden; }.social-avatar img,.social-mini-avatar img { width:100%; height:100%; object-fit:cover; }.social-mini-avatar { overflow:hidden; }.social-photo-credit { margin:0; padding:0 32px 18px; font-size:11px; color:#625b50; }.social-photo-credit a { text-decoration:underline; text-underline-offset:3px; }
+
+.profile-products { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:20px 0 26px; }.profile-product { display:flex; min-width:0; flex-direction:column; background:var(--white); border:1px solid #cfc5b7; border-radius:10px; overflow:hidden; }.profile-product > img { width:100%; height:180px; object-fit:contain; padding:16px; background:white; }.profile-product > div { display:flex; flex-direction:column; flex:1; padding:16px; }.profile-product h3 { font-size:19px; line-height:1.2; margin:0 0 10px; }.profile-product p { margin:0 0 12px; font-size:13px; }.profile-product strong { margin-top:auto; font-size:20px; }.profile-product-action { margin-top:16px; font-size:13px; font-weight:700; color:var(--leaf); }.profile-product:hover { border-color:var(--leaf); box-shadow:0 3px 10px rgba(29,26,23,.1); }.social-card .profile-products-note { font-size:12px; }@media(max-width:420px) { .profile-products { grid-template-columns:1fr; } }
+
+/* Keep cover copy and photography in separate, responsive columns. */
+.social-cover { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); height:auto; min-height:300px; }
+.social-cover > img { position:static; grid-column:2; grid-row:1; width:100%; height:100%; min-height:300px; max-height:360px; object-fit:cover; opacity:1; }
+.social-cover > div { grid-column:1; grid-row:1; display:flex; flex-direction:column; justify-content:center; min-width:0; max-width:none; padding:40px; background:var(--mango); }
+.social-cover p { margin:0 0 20px; }
+.social-cover strong { display:block; width:100%; max-width:12ch; font-size:clamp(32px,4vw,54px); line-height:1.08; white-space:normal; overflow-wrap:break-word; text-wrap:balance; }
+.social-cover strong span { white-space:normal; }
+@media(max-width:600px) {
+ .social-cover { grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); min-height:240px; }
+ .social-cover > div { padding:28px 20px 44px; }
+ .social-cover > img { min-height:240px; max-height:none; }
+ .social-cover strong { font-size:clamp(26px,6vw,36px); }
+ .social-cover p { font-size:10px; letter-spacing:.06em; margin-bottom:14px; }
+}
+
+/* Keep the profile sidebar accessible beside the story and products. */
+@media (min-width:801px) {
+ .social-columns { align-items:start; }
+ .social-columns > aside {
+  position:sticky;
+  top:166px;
+  max-height:calc(100dvh - 186px);
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:var(--leaf) transparent;
+  padding-right:6px;
+  scroll-padding-block:16px;
+ }
+ .social-columns > aside .social-card:last-child { margin-bottom:0; }
+}

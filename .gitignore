@@ -1,3 +1,6 @@
+.superdesign/tmp/
+
+# macOS metadata and local settings
 ._*
 .DS_Store
 .claude/settings.local.json
