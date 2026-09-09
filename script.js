@@ -186,11 +186,18 @@
     const filterButtons = [...document.querySelectorAll("[data-filter]")];
     const productCards = [...document.querySelectorAll("[data-product-category]")];
     function setFilter(category) {
-      filterButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.filter === category));
+      filterButtons.forEach((button) => {
+        const active = button.dataset.filter === category;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
       productCards.forEach((card) => {
         const visible = category === "all" || card.dataset.productCategory === category;
         card.classList.toggle("is-filtered-out", !visible);
         card.setAttribute("aria-hidden", String(!visible));
+        if (visible && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && card.animate) {
+          card.animate([{ opacity: .3, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 350, easing: 'ease-out' });
+        }
       });
     }
     filterButtons.forEach((button) => button.addEventListener("click", () => setFilter(button.dataset.filter)));
