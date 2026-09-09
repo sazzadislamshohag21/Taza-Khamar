@@ -46,3 +46,8 @@
  }
  .social-columns > aside .social-card:last-child { margin-bottom:0; }
 }
+
+/* Straight corners for the Mitali Mango House profile. */
+.profile-straight-corners .social-profile *,
+.profile-straight-corners .social-profile *::before,
+.profile-straight-corners .social-profile *::after { border-radius: 0; }
